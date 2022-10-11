@@ -17,7 +17,7 @@ const Skills = () => {
                   src="public/assets/skills/swift.png"
                   width="64px"
                   height="64px"
-                  alt="/"
+                  alt=""
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
