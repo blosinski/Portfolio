@@ -13,7 +13,7 @@ const Main = () => {
             Let's build something together
           </p> */}
           <h1 className="py-4 text-gray-700">
-            Hey! I'm <span className="text-[#d43f3f]">Brendan</span>
+            Hey! I&apos;m <span className="text-[#d43f3f]">Brendan</span>
           </h1>
           <h1 className="py-2 text-gray-400">A Mobile Developer</h1>
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
@@ -27,6 +27,7 @@ const Main = () => {
             <a
               href="https://www.linkedin.com/in/brendan-losinski-60abb9208/"
               target="_blank"
+              rel="noreferrer"
             >
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <FaLinkedinIn />
@@ -35,6 +36,7 @@ const Main = () => {
             <a
               href="https://github.com/blosinski?tab=repositories"
               target="_blank"
+              rel="noreferrer"
             >
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <FaGithub />
