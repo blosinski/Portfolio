@@ -6,8 +6,6 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/contact.svg';
-import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
-import { useCallback } from 'react';
 
 const Contact = () => {
   return (
