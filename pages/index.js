@@ -19,10 +19,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <script src="https://www.google.com/recaptcha/api.js"></script>
       </Head>
-      <HCaptcha 
-        sitekey='6647e5c5-b442-4cca-9b50-ad5183e5be25'
-        onVerify={(token,ekey) => handleVerificationSuccess(token, ekey)}>
-      </HCaptcha>
     <Main />
     <About />
     <Skills />
