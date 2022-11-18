@@ -14,7 +14,6 @@ export default function Home() {
         <title>Brendan | iOS Developer</title>
         <meta name="description" content="I'm a mobile developer specializing in developing and designing apps." />
         <link rel="icon" href="/favicon.ico" />
-        <script src="https://www.google.com/recaptcha/api.js"></script>
       </Head>
     <Main />
     <About />
