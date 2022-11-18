@@ -8,7 +8,6 @@ import Script from 'next/script'
 import React, { useState } from "react";
 
 export default function Home() {
-  
   return (
     <div>
       <Head>
@@ -22,8 +21,6 @@ export default function Home() {
     <Skills />
     <Projects />
     <Contact />
-    
     </div>
-    
   )
 }
