@@ -8,6 +8,33 @@ import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/contact.svg';
 
 const Contact = () => {
+  const [query, setQuery] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    subject: '',
+    'g-recaptcha-response': '',
+  });
+  const handleParam = () => (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setQuery((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+  const formSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    Object.entries(query).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+    fetch('{https://getform.io/thank-you}', {
+      method: 'POST',
+      body: formData,
+    }).then(() => setQuery({ name: '', email: '' }));
+  };
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
@@ -76,26 +103,33 @@ const Contact = () => {
             <div className="p-4">
               <form
                 action="https://getform.io/f/61bfe690-1106-4332-b214-7a95774dbddd"
-                method="POST"
-                encType="multipart/form-data"
+                onSubmit={formSubmit}
               >
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
-                    <label className="uppercase text-sm py-2">Name</label>
+                    <label htmlFor="name" className="uppercase text-sm py-2">
+                      Name
+                    </label>
                     <input
                       className="border-2 rounded-lg p-3 flex border-gray-300"
-                      type="text"
+                      type="name"
                       name="name"
+                      id="name"
+                      value={query.name}
+                      onChange={handleParam()}
                     />
                   </div>
                   <div className="flex flex-col">
-                    <label className="uppercase text-sm py-2">
+                    <label htmlFor="phone" className="uppercase text-sm py-2">
                       Phone Number
                     </label>
                     <input
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
                       name="phone"
+                      id="phone"
+                      value={query.phone}
+                      onChange={handleParam()}
                     />
                   </div>
                 </div>
@@ -105,6 +139,9 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="email"
                     name="email"
+                    id="email"
+                    value={query.email}
+                    onChange={handleParam()}
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -113,6 +150,9 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
                     name="subject"
+                    id="subject"
+                    value={query.subject}
+                    onChange={handleParam()}
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -121,9 +161,12 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 border-gray-300"
                     rows="10"
                     name="message"
+                    id="message"
+                    value={query.message}
+                    onChange={handleParam()}
                   ></textarea>
                 </div>
-                <button className="w-full p-4 text-gray-100 mt-4">
+                <button type="submit" className="w-full p-4 text-gray-100 mt-4">
                   Send Message
                 </button>
               </form>
