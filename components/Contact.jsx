@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Script from 'next/script';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
@@ -6,6 +7,7 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/contact.svg';
+import { formSubmit } from '../pages/index';
 
 const Contact = () => {
   return (
@@ -78,6 +80,7 @@ const Contact = () => {
                 action="https://getform.io/f/61bfe690-1106-4332-b214-7a95774dbddd"
                 method="POST"
                 encType="multipart/form-data"
+                onSubmit={formSubmit}
               >
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
