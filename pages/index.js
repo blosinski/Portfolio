@@ -39,6 +39,7 @@ export default function Home() {
       <Head>
         <title>Brendan | iOS Developer</title>
         <meta name="description" content="I’m a front-end web developer specializing in building (and occasionally designing) exceptional digital experiences." />
+        <meta name="description" content="I'm a mobile developer specializing in developing and designing apps." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
     <Main />
@@ -47,9 +48,11 @@ export default function Home() {
     <Projects />
     <Contact />
     <Script
+        // Add your reCAPTCHA site key
         src="https://www.google.com/recaptcha/api.js?render=6LegW9UiAAAAAOjncHpTnAWfJDULCGeAxINkUn5C"
         onReady={() => {
           grecaptcha.ready(function() {
+            // Add your reCAPTCHA site key
             grecaptcha.execute('6LegW9UiAAAAAOjncHpTnAWfJDULCGeAxINkUn5C', {action: 'homepage'})
             .then(function(token) {
               setQuery({'g-recaptcha-response': token})

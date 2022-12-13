@@ -68,34 +68,19 @@ const Navbar = () => {
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
-            <li
-              onClick={() => setNav(false)}
-              className="ml-10 text-sm uppercase hover:border-b"
-            >
+            <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/">Home</Link>
             </li>
-            <li
-              onClick={() => setNav(false)}
-              className="ml-10 text-sm uppercase hover:border-b"
-            >
+            <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/#about">About</Link>
             </li>
-            <li
-              onClick={() => setNav(false)}
-              className="ml-10 text-sm uppercase hover:border-b"
-            >
+            <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/#skills">Skills</Link>
             </li>
-            <li
-              onClick={() => setNav(false)}
-              className="ml-10 text-sm uppercase hover:border-b"
-            >
+            <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/#projects">Projects</Link>
             </li>
-            <li
-              onClick={() => setNav(false)}
-              className="ml-10 text-sm uppercase hover:border-b"
-            >
+            <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/#contact">Contact</Link>
             </li>
           </ul>
@@ -141,7 +126,7 @@ const Navbar = () => {
             </div>
             <div className="border-b border-gray-300 my-4">
               <p className="w-[85%] md:w-[90%] py-4">
-                Let's build something legendary together
+                Let&#39;s build something legendary together
               </p>
             </div>
           </div>
@@ -179,12 +164,12 @@ const Navbar = () => {
               </Link>
             </ul>
             <div className="pt-40">
-              <p className="uppercase tracking-widest text-[#d43f3f]">
+              <p className="uppercase tracking-widest text-[#5651e5]">
                 Let&#39;s Connect
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <a
-                  href="https://www.linkedin.com/in/brendan-losinski-60abb9208/"
+                  href="https://www.linkedin.com/in/clint-briley-50056920a/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -193,7 +178,7 @@ const Navbar = () => {
                   </div>
                 </a>
                 <a
-                  href="https://github.com/blosinski"
+                  href="https://github.com/fireclint"
                   target="_blank"
                   rel="noreferrer"
                 >
