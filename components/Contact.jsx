@@ -6,7 +6,7 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/contact.svg';
-import { formSubmit } from '../pages/index.js'
+import { formSubmit } from '../pages/index.js';
 
 const Contact = () => {
   const [query, setQuery] = useState({
@@ -167,7 +167,10 @@ const Contact = () => {
                     onChange={handleParam()}
                   ></textarea>
                 </div>
-                <button type="submit" className="w-full p-4 text-gray-100 mt-4">
+                <button
+                  type="submit"
+                  className="w-full p-4 bg-[#d43f3f] text-gray-100  mt-4"
+                >
                   Send Message
                 </button>
               </form>
