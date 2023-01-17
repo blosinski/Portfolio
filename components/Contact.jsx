@@ -1,41 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import Script from 'next/script';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/contact.svg';
 import { formSubmit } from '../pages/index.js';
+import { handleParam } from '../pages/index.js';
 
 const Contact = () => {
-  const [query, setQuery] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-    subject: '',
-    'g-recaptcha-response': '',
-  });
-  const handleParam = () => (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setQuery((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-  const formSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    Object.entries(query).forEach(([key, value]) => {
-      formData.append(key, value);
-    });
-    fetch('{https://getform.io/thank-you}', {
-      method: 'POST',
-      body: formData,
-    }).then(() => setQuery({ name: '', email: '' }));
-  };
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">

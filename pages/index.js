@@ -10,16 +10,19 @@ import React, { useState } from "react";
 
 export default function Home() {
   const [query, setQuery] = useState({
-    name: "",
-    email: "",
-    "g-recaptcha-response": ""
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    subject: '',
+    'g-recaptcha-response': '',
   });
   const handleParam = () => (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setQuery((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
   const formSubmit = (e) => {
@@ -29,10 +32,12 @@ export default function Home() {
       formData.append(key, value);
     });
     // ADD Getform.io Endpoint
-    fetch("https://getform.io/f/61bfe690-1106-4332-b214-7a95774dbddd", {
-      method: "POST",
-      body: formData
-    }).then(() => setQuery({ name: "", email: ""}));
+    fetch('https://getform.io/f/61bfe690-1106-4332-b214-7a95774dbddd', {
+      method: 'POST',
+      body: formData,
+    }).then(() =>
+      setQuery({ name: '', email: '', phone: '', message: '', subject: '' })
+    );
   };
   return (
     <div>
@@ -48,18 +53,21 @@ export default function Home() {
     <Projects />
     <Contact />
     <Script
+    // Add your reCAPTCHA site key
+    src="https://www.google.com/recaptcha/api.js?render=6LegW9UiAAAAAOjncHpTnAWfJDULCGeAxINkUn5C"
+    onReady={() => {
+      grecaptcha.ready(function () {
         // Add your reCAPTCHA site key
-        src="https://www.google.com/recaptcha/api.js?render=6LegW9UiAAAAAOjncHpTnAWfJDULCGeAxINkUn5C"
-        onReady={() => {
-          grecaptcha.ready(function() {
-            // Add your reCAPTCHA site key
-            grecaptcha.execute('6LegW9UiAAAAAOjncHpTnAWfJDULCGeAxINkUn5C', {action: 'homepage'})
-            .then(function(token) {
-              setQuery({'g-recaptcha-response': token})
-            });
+        grecaptcha
+          .execute('6LegW9UiAAAAAOjncHpTnAWfJDULCGeAxINkUn5C', {
+            action: 'homepage',
+          })
+          .then(function (token) {
+            setQuery({ 'g-recaptcha-response': token });
           });
-        }}
-      />
+      });
+    }}
+  />;
     </div>
   )
 }
