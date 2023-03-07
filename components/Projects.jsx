@@ -8,7 +8,7 @@ import uberImg from '../public/assets/projects/UberAppPicture.png';
 import uiImg from '../public/assets/projects/UISlideoutAppPicture.png';
 import walletImg from '../public/assets/projects/WalletAppPicture.png';
 import ProjectItem from './ProjectItem';
-
+import StockApp5 from '../public/assets/projects/StockApp5.png';
 const Projects = () => {
   return (
     <div id="projects" className="w-full">
@@ -28,7 +28,7 @@ const Projects = () => {
             title="Location Lookup"
             backgroundImg={locationImg}
             projectUrl="https://github.com/blosinski/Location-App"
-            tech="Swift"
+            tech="Swift UIKit"
           />
           <ProjectItem
             title="Stock API Tracker"
@@ -53,6 +53,12 @@ const Projects = () => {
             backgroundImg={walletImg}
             projectUrl="https://github.com/blosinski/AppleWalletUI"
             tech="SwiftUI"
+          />
+          <ProjectItem
+            title="Stock App"
+            backgroundImg={StockApp5}
+            projectUrl="https://github.com/blosinski/StocksApp"
+            tech="SwiftUI, RESTful API"
           />
         </div>
       </div>
