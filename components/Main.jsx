@@ -17,11 +17,13 @@ const Main = () => {
           </h1>
           <h1 className="py-2 text-gray-400">A Mobile Developer</h1>
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
-            As a software engineer specializing in building and designing
-            exceptional iOS Mobile Apps, I have a passion for creating
-            innovative and user-friendly applications. I am constantly striving
-            to improve my skillset and keep up-to-date on the latest trends in
-            mobile app development.
+            As a dedicated software engineer specializing in iOS Development, I
+            am passionate about creating user-friendly applications and staying
+            updated on industry trends. If you're interested in discussing
+            potential collaborations or how my expertise can contribute to your
+            project, please contact me using the methods below. I look forward
+            to connecting with you and working together to create outstanding
+            mobile experiences.
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
             <a
@@ -47,7 +49,7 @@ const Main = () => {
                 <AiOutlineMail />
               </div>
             </a>
-            <a href="Resume.pdf" target="_blank" download>
+            <a href="SE-Resume.pdf" target="_blank" download>
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <BsFillPersonLinesFill />
               </div>
