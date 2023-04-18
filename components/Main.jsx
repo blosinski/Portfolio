@@ -9,9 +9,9 @@ const Main = () => {
     <div id="home" className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
-          {/* <p className="uppercase text-sm tracking-widest text-gray-600">
-            Let's build something together
-          </p> */}
+          <p className="uppercase text-sm tracking-widest text-gray-600">
+            Let&rsquo;s build something together
+          </p>
           <h1 className="py-4 text-gray-700">
             Hey! I&apos;m <span className="text-[#d43f3f]">Brendan</span>
           </h1>
@@ -19,7 +19,7 @@ const Main = () => {
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
             As a dedicated software engineer specializing in iOS Development, I
             am passionate about creating user-friendly applications and staying
-            updated on industry trends. If you're interested in discussing
+            updated on industry trends. If you&apos;re interested in discussing
             potential collaborations or how my expertise can contribute to your
             project, please contact me using the methods below. I look forward
             to connecting with you and working together to create outstanding
